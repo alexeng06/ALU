@@ -1,0 +1,144 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jun  2 13:10:19 2019
+# Process ID: 7960
+# Current directory: C:/Users/xenia/ALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12528 C:\Users\xenia\ALU\ALU.xpr
+# Log file: C:/Users/xenia/ALU/vivado.log
+# Journal file: C:/Users/xenia/ALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/xenia/ALU/ALU.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/xenia/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_project
+create_project FP_Decoder C:/Users/xenia/Desktop/FP_Decoder -part xc7a35ticpg236-1L
+add_files -fileset constrs_1 -norecurse C:/Users/xenia/ALU/Basys3_Master.xdc
+file mkdir C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.srcs/sources_1/new
+close [ open C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.srcs/sources_1/new/FPU_decoder.vhd w ]
+add_files C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.srcs/sources_1/new/FPU_decoder.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/xenia/ALU/Basys3_Master.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/xenia/ALU/Basys3_Master.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/xenia/Desktop/FP_Decoder/Basys3_Master.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+launch_simulation
+source FPU_decoder.tcl
+add_bp {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.srcs/sources_1/new/FPU_decoder.vhd} 23
+remove_bps -file {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.srcs/sources_1/new/FPU_decoder.vhd} -line 23
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.runs/impl_1/FPU_decoder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.runs/impl_1/FPU_decoder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.runs/impl_1/FPU_decoder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/FP_Decoder/FP_Decoder.runs/impl_1/FPU_decoder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+close_project
+create_project FP_Encoder C:/Users/xenia/Desktop/FP_Encoder -part xc7a35ticpg236-1L
+add_files -fileset constrs_1 -norecurse C:/Users/xenia/Desktop/FP_Encoder/Basys3_Master.xdc
+file mkdir C:/Users/xenia/Desktop/FP_Encoder/FP_Encoder.srcs/sources_1/new
+close [ open C:/Users/xenia/Desktop/FP_Encoder/FP_Encoder.srcs/sources_1/new/FPU_Encoder.vhd w ]
+add_files C:/Users/xenia/Desktop/FP_Encoder/FP_Encoder.srcs/sources_1/new/FPU_Encoder.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/FP_Encoder/FP_Encoder.runs/impl_1/FPU_Encoder.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

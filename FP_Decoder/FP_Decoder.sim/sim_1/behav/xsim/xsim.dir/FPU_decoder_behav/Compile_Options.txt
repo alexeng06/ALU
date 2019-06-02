@@ -1,0 +1,1 @@
+-wto "5cbb04dfdc0b4f0fb30a32bff827d3a3" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "FPU_decoder_behav" "xil_defaultlib.FPU_decoder" -log "elaborate.log" 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1559486295">
+  <File Type="BITSTR-BMM" Name="FPU_Encoder_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="FPU_Encoder_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="FPU_Encoder_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="FPU_Encoder_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="FPU_Encoder.tcl"/>
+  <File Type="OPT-TIMING" Name="FPU_Encoder_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="FPU_Encoder_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="FPU_Encoder_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="FPU_Encoder_reports.tcl"/>
+  <File Type="OPT-DRC" Name="FPU_Encoder_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="FPU_Encoder.hwdef"/>
+  <File Type="PWROPT-DCP" Name="FPU_Encoder_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="FPU_Encoder_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="FPU_Encoder_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="FPU_Encoder_placed.dcp"/>
+  <File Type="PLACE-IO" Name="FPU_Encoder_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="FPU_Encoder_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="FPU_Encoder_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="FPU_Encoder_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="FPU_Encoder_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="FPU_Encoder_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="FPU_Encoder_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="FPU_Encoder.bgn"/>
+  <File Type="PLACE-TIMING" Name="FPU_Encoder_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="FPU_Encoder_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="FPU_Encoder.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="FPU_Encoder_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="FPU_Encoder_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="FPU_Encoder_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="FPU_Encoder.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="FPU_Encoder_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="FPU_Encoder_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="FPU_Encoder_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="FPU_Encoder_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="FPU_Encoder_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="FPU_Encoder_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="FPU_Encoder.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="FPU_Encoder_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="FPU_Encoder.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="FPU_Encoder_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="FPU_Encoder_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="FPU_Encoder.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="FPU_Encoder_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="FPU_Encoder_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="FPU_Encoder_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="FPU_Encoder_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="FPU_Encoder_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="FPU_Encoder_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="FPU_Encoder_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="FPU_Encoder_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="FPU_Encoder_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="FPU_Encoder_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="FPU_Encoder_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="FPU_Encoder_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="FPU_Encoder_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="FPU_Encoder_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="FPU_Encoder_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="FPU_Encoder_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="FPU_Encoder_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="FPU_Encoder_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="FPU_Encoder_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="FPU_Encoder.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="FPU_Encoder_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="FPU_Encoder.rbt"/>
+  <File Type="BITSTR-NKY" Name="FPU_Encoder.nky"/>
+  <File Type="BG-DRC" Name="FPU_Encoder.drc"/>
+  <File Type="RDI-RDI" Name="FPU_Encoder.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/FPU_Encoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="FPU_Encoder"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun Jun  2 18:37:43 2019
+| Date             : Tue Jun  4 16:05:38 2019
 | Host             : DESKTOP-3L3CN7P running 64-bit major release  (build 9200)
 | Command          : report_power -file ALU_4bit_power_routed.rpt -pb ALU_4bit_power_summary_routed.pb -rpx ALU_4bit_power_routed.rpx
 | Design           : ALU_4bit
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 8.428        |
+| Total On-Chip Power (W)  | 8.971        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 8.336        |
-| Device Static (W)        | 0.092        |
+| Dynamic (W)              | 8.874        |
+| Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 57.9         |
-| Junction Temperature (C) | 67.1         |
+| Max Ambient (C)          | 55.2         |
+| Junction Temperature (C) | 69.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.899 |      268 |       --- |             --- |
-|   LUT as Logic |     0.838 |      172 |     20800 |            0.83 |
-|   CARRY4       |     0.051 |       16 |      8150 |            0.20 |
+| Slice Logic    |     0.566 |      185 |       --- |             --- |
+|   LUT as Logic |     0.530 |      110 |     20800 |            0.53 |
+|   CARRY4       |     0.023 |        6 |      8150 |            0.07 |
+|   F7/F8 Muxes  |     0.008 |        9 |     32600 |            0.03 |
 |   BUFG         |     0.005 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |     0.004 |        4 |     32600 |            0.01 |
-|   Register     |     0.000 |       42 |     41600 |            0.10 |
+|   Register     |     0.000 |       37 |     41600 |            0.09 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.888 |      228 |       --- |             --- |
-| I/O            |     6.549 |       21 |       106 |           19.81 |
-| Static Power   |     0.092 |          |           |                 |
-| Total          |     8.428 |          |           |                 |
+| Signals        |     0.662 |      159 |       --- |             --- |
+| I/O            |     7.646 |       21 |       106 |           19.81 |
+| Static Power   |     0.096 |          |           |                 |
+| Total          |     8.971 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       0.950 |     1.963 |       1.932 |      0.030 |
-| Vccaux    |       1.800 |     0.253 |       0.238 |      0.015 |
-| Vcco33    |       3.300 |     1.841 |       1.840 |      0.001 |
+| Vccint    |       0.950 |     1.378 |       1.345 |      0.033 |
+| Vccaux    |       1.800 |     0.294 |       0.278 |      0.016 |
+| Vcco33    |       3.300 |     2.151 |       2.150 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,7 +139,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| ALU_4bit |     8.336 |
+| ALU_4bit |     8.874 |
 +----------+-----------+
 
 

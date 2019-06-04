@@ -11,6 +11,8 @@ port( 	DATA1:in std_logic_vector(3 downto 0);
         Overflow:out std_logic;
         Negativ:out std_logic;
         Zero:out std_logic;
+        
+        --If the Encoding cut significant Bits
         FPUOverflow: out std_logic);
 end ALU_4bit;
 
@@ -21,23 +23,20 @@ architecture Behavioral of ALU_4bit is
     signal ResultMul   : std_logic_vector(7 downto 0);
     
     --Fixed Point Signal
-    signal FPUData1: std_logic_vector(4 downto 0);
-    signal FPUData2: std_logic_vector(4 downto 0);
+    signal FPUData1: std_logic_vector(5 downto 0);
+    signal FPUData2: std_logic_vector(5 downto 0);
     
     --Floating Point Output
     signal FPUOutput: std_logic_vector(3 downto 0);
-    signal FPUResult: std_logic_vector(9 downto 0);
+    signal FPUResult: std_logic_vector(6 downto 0);
+    signal FPUMatissaResult: std_logic_vector(5 downto 0);
+    signal FPUCarry: std_logic_vector(0 downto 0);
+    signal FPUExponentResult: std_logic_vector(2 downto 0);
     
-    --Signal after Floting Point Multiplication
-    signal FPUMulResult: std_logic_vector(9 downto 0);
-    
-    --Signal with inverse Value
-    signal FPUInverse: std_logic_vector(3 downto 0);
-
     --Floating Point Encoder
     component FPU_Encoder is
         port(
-            DATA:in std_logic_vector(4 downto 0);
+            DATA:in std_logic_vector(5 downto 0);
             OutputData:out std_logic_vector(3 downto 0);
             OVF:out std_logic
         );
@@ -47,7 +46,7 @@ architecture Behavioral of ALU_4bit is
     component FPU_decoder is
         port(
             DATA:in std_logic_vector(3 downto 0);
-            OutputData:out std_logic_vector(4 downto 0)
+            OutputData:out std_logic_vector(5 downto 0)
         );
     end component;
     
@@ -58,7 +57,7 @@ architecture Behavioral of ALU_4bit is
     decoderData2: FPU_decoder port map(DATA => DATA2, OutputData => FPUData2);
     
     -- Encoder for Output
-    encoderOutput: FPU_Encoder port map(DATA => FPUResult(4 downto 0), OutputData => FPUOutput, OVF => FPUOverflow );
+    encoderOutput: FPU_Encoder port map(DATA => FPUResult(5 downto 0), OutputData => FPUOutput, OVF => FPUOverflow );
     
     process(Change,DATA1,DATA2,CMD) is
     begin
@@ -127,10 +126,10 @@ architecture Behavioral of ALU_4bit is
     --FP ADD
     when "1000" =>
         -- Addition of Fixedpoint
-        FPUResult(5 downto 0) <= std_logic_vector(unsigned("0"&FPUData1) + unsigned(FPUData2));
+        FPUResult(6 downto 0) <= std_logic_vector(unsigned("0"&FPUData1) + unsigned(FPUData2));
         
         --Check Overflow
-        if(FPUResult(9 downto 5) > "00000") then
+        if(FPUResult(6) = '1') then
             Overflow <= '1';
         end if;
         OUTPUT <= FPUOutput;
@@ -138,49 +137,59 @@ architecture Behavioral of ALU_4bit is
      --FP SUB
     when "1001" =>
          -- Substraction of Fixedpoint
-        FPUResult(4 downto 0) <= std_logic_vector(unsigned(FPUData1) - unsigned(FPUData2));
+        FPUResult(5 downto 0) <= std_logic_vector(unsigned(FPUData1) - unsigned(FPUData2));
         OUTPUT <= FPUOutput;
         
      --FP DIV
     when "1010" =>
-        --Check Divison with Zero
-        if(FPUData2 = "00000") then
-            OUTPUT <= "0000";
-            Zero <= '1';
+        --Check if Carry is needed
+        if(DATA2(3 downto 2) <= DATA1(3 downto 2))then
+            --No Carray shift Matissa1 2 Position to left
+            --To Calculate 2 Significant Bits after Point
+            FPUMatissaResult(4 downto 0) <= std_logic_vector(unsigned("1" &DATA1(3 downto 2)& "00") / unsigned("1" &DATA2(3 downto 2)));
+            FPUCarry <= "0";
         else
-            --Check if Divisor smaller 1
-            if(FPUData2 <= "00111") then
-                -- Build Inverse of Divisor
-                FPUInverse <= FPUData2(0) & FPUData2(1)& FPUData2(2) & "0";
-                --Multiplikation with Divisor
-                FPUResult(8 downto 0) <= std_logic_vector(unsigned(FPUData1) * unsigned(FPUInverse));
-                --Check Overflow
-                if(FPUResult(9 downto 5) > "00000") then
-                    Overflow <= '1';
-                end if;
-            else
-                --Division of Fixed Point
-                FPUResult(4 downto 0) <= std_logic_vector(unsigned(FPUData1) / unsigned(FPUData2));
-            end if;
-            OUTPUT <= FPUOutput;
+            --No Carray shift Matissa1 3 Position to left
+            --To Calculate 2 Significant Bits after Point
+            --The Third shift is because Matissa1 / Matissa2 = 0
+            FPUMatissaResult(5 downto 0) <= std_logic_vector(unsigned("1" &DATA1(3 downto 2)&"000") / unsigned("1" &DATA2(3 downto 2)));
+            --Set Carray because of the third Shift
+            FPUCarry <= "1";
+        end if ;
+        --Output new Matissa
+        OUTPUT(3 downto 2) <= FPUMatissaResult(1 downto 0);
+        --Calculate new Exponent
+        FPUExponentResult <= std_logic_vector(signed(DATA1(1 downto 0)) - signed(DATA2(1 downto 0)) - signed("00" & FPUCarry));
+        --Check if Exponent is out of range
+        if((FPUExponentResult(2 downto 1) = "01")or(FPUExponentResult(2 downto 1) = "10")) then 
+            Overflow <= '1';
         end if;
+        --Output Exponent
+        OUTPUT(1 downto 0) <= FPUExponentResult(2) & FPUExponentResult(0);
+
+    --FP MUL
     when "1011" =>
-        --Check if one Parameter equal Zero
-        if(FPUData1 = "00000") or(FPUData2 = "00000") then
-            OUTPUT <= "0000";
+        --Multiply the Matissas
+        FPUMatissaResult <= std_logic_vector(unsigned("1" & DATA1(3 downto 2)) * unsigned("1" & DATA2(3 downto 2)));
+        --Check if Result is in a bigger Range
+        if(FPUMatissaResult(5) = '1')then
+            --Set Carray for bigger Range
+            FPUCarry <= "1";
+            --Output new Matissa
+            OUTPUT(3 downto 2) <= FPUMatissaResult(4 downto 3);
         else
-            --Multiplikation with Fixedpoint
-            FPUMulResult(9 downto 0) <= std_logic_vector(unsigned(FPUData1) * unsigned(FPUData2));
-            
-            --Check overflow in both directions
-            if((FPUMulResult(9 downto 8) > "00") or(FPUMulResult(2 downto 0) > "000")) then
-                Overflow <= '1';
-            end if;
-            
-            --Shift result with 3 to left
-            FPUResult(4 downto 0) <=FPUMulResult(7 downto 3);
-            OUTPUT <= FPUOutput;
+            --No new Range Output Matissa
+            FPUCarry <= "0";
+            OUTPUT(3 downto 2) <= FPUMatissaResult(3 downto 2);
+        end if ;
+        --Calculate Exponent
+        FPUExponentResult <= std_logic_vector(signed(DATA1(1 downto 0)) + signed(DATA2(1 downto 0)) + signed("00" & FPUCarry));
+        --Check if Exponent is out of Range
+        if((FPUExponentResult(2 downto 1) = "01")or(FPUExponentResult(2 downto 1) = "10")) then 
+            Overflow <= '1';
         end if;
+        --Output Exponent
+        OUTPUT(1 downto 0) <= FPUExponentResult(2) & FPUExponentResult(0);
         
     --DEFALUT
     when others =>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Jun  2 18:37:41 2019
+| Date         : Tue Jun  4 16:05:35 2019
 | Host         : DESKTOP-3L3CN7P running 64-bit major release  (build 9200)
 | Command      : report_drc -file ALU_4bit_drc_routed.rpt -pb ALU_4bit_drc_routed.pb -rpx ALU_4bit_drc_routed.rpx
 | Design       : ALU_4bit
@@ -36,12 +36,12 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net FPUMulResult_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUMulResult_reg[9]_i_2/O, cell FPUMulResult_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FPUExponentResult_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUExponentResult_reg[2]_i_2/O, cell FPUExponentResult_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net FPUResult_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUResult_reg[4]_i_2/O, cell FPUResult_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FPUMatissaResult_reg[5]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUMatissaResult_reg[5]_i_2/O, cell FPUMatissaResult_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
@@ -51,7 +51,7 @@ Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net FPUResult_reg[8]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUResult_reg[8]_i_2/O, cell FPUResult_reg[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net FPUResult_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin FPUResult_reg[6]_i_2/O, cell FPUResult_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning

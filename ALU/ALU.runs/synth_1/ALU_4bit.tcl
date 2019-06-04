@@ -23,16 +23,16 @@ create_project -in_memory -part xc7a35ticpg236-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/xenia/ALU/ALU.cache/wt [current_project]
-set_property parent.project_path C:/Users/xenia/ALU/ALU.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/xenia/Desktop/ALU/ALU/ALU.cache/wt [current_project]
+set_property parent.project_path C:/Users/xenia/Desktop/ALU/ALU/ALU.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/xenia/ALU/ALU.cache/ip [current_project]
+set_property ip_output_repo c:/Users/xenia/Desktop/ALU/ALU/ALU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/xenia/ALU/FPU_Encoder.vhd
-  C:/Users/xenia/ALU/FPU_decoder.vhd
-  C:/Users/xenia/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd
+  C:/Users/xenia/Desktop/ALU/ALU/FPU_Encoder.vhd
+  C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd
+  C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -42,8 +42,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/xenia/ALU/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/xenia/ALU/Basys3_Master.xdc]
+read_xdc C:/Users/xenia/Desktop/ALU/ALU/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/xenia/Desktop/ALU/ALU/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

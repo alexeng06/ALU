@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jun  4 16:02:49 2019
-# Process ID: 10904
+# Start of session at: Thu Jun  6 13:35:46 2019
+# Process ID: 10212
 # Current directory: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1
 # Command line: vivado.exe -log ALU_4bit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_4bit.tcl
 # Log file: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/ALU_4bit.vds
@@ -15,33 +15,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1180 
+INFO: Helper process launched with PID 1388 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 430.918 ; gain = 97.648
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 432.242 ; gain = 99.203
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ALU_4bit' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:17]
-INFO: [Synth 8-3491] module 'FPU_decoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:6' bound to instance 'decoderData1' of component 'FPU_decoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'ALU_4bit' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:19]
+INFO: [Synth 8-3491] module 'FPU_decoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:6' bound to instance 'decoderData1' of component 'FPU_decoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:56]
 INFO: [Synth 8-638] synthesizing module 'FPU_decoder' [C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:15]
 INFO: [Synth 8-226] default block is never used [C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:34]
 WARNING: [Synth 8-614] signal 'Exponent' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:24]
 WARNING: [Synth 8-614] signal 'Decoded' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'FPU_decoder' (1#1) [C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:15]
-INFO: [Synth 8-3491] module 'FPU_decoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:6' bound to instance 'decoderData2' of component 'FPU_decoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:55]
-INFO: [Synth 8-3491] module 'FPU_Encoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_Encoder.vhd:26' bound to instance 'encoderOutput' of component 'FPU_Encoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:58]
+INFO: [Synth 8-3491] module 'FPU_decoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_decoder.vhd:6' bound to instance 'decoderData2' of component 'FPU_decoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:57]
+INFO: [Synth 8-3491] module 'FPU_Encoder' declared at 'C:/Users/xenia/Desktop/ALU/ALU/FPU_Encoder.vhd:26' bound to instance 'encoderOutput' of component 'FPU_Encoder' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
 INFO: [Synth 8-638] synthesizing module 'FPU_Encoder' [C:/Users/xenia/Desktop/ALU/ALU/FPU_Encoder.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'FPU_Encoder' (2#1) [C:/Users/xenia/Desktop/ALU/ALU/FPU_Encoder.vhd:37]
-WARNING: [Synth 8-614] signal 'Result' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'ResultMul' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUData1' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUData2' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUOutput' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUMatissaResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUCarry' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-WARNING: [Synth 8-614] signal 'FPUExponentResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'ALU_4bit' (3#1) [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:17]
+WARNING: [Synth 8-614] signal 'Result' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'ResultMul' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUData1' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUData2' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUOutput' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUMatissaResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUCarry' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+WARNING: [Synth 8-614] signal 'FPUExponentResult' is read in the process but is not in the sensitivity list [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'ALU_4bit' (3#1) [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 487.453 ; gain = 154.184
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 488.617 ; gain = 155.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -54,10 +54,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 487.453 ; gain = 154.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 488.617 ; gain = 155.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 487.453 ; gain = 154.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 488.617 ; gain = 155.578
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -71,45 +71,45 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 Finished Parsing XDC File [C:/Users/xenia/Desktop/ALU/ALU/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/xenia/Desktop/ALU/ALU/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ALU_4bit_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ALU_4bit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 803.605 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 803.605 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.965 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 801.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 803.605 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 803.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 801.965 ; gain = 468.695
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 803.605 ; gain = 470.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 801.965 ; gain = 468.695
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 803.605 ; gain = 470.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 801.965 ; gain = 468.695
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 803.605 ; gain = 470.566
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:84]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:68]
-WARNING: [Synth 8-327] inferring latch for variable 'OUTPUT_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:75]
-WARNING: [Synth 8-327] inferring latch for variable 'Overflow_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:64]
-WARNING: [Synth 8-327] inferring latch for variable 'Negativ_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:65]
-WARNING: [Synth 8-327] inferring latch for variable 'Zero_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:66]
-WARNING: [Synth 8-327] inferring latch for variable 'Result_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:73]
-WARNING: [Synth 8-327] inferring latch for variable 'ResultMul_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:104]
-WARNING: [Synth 8-327] inferring latch for variable 'FPUExponentResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:151]
-WARNING: [Synth 8-327] inferring latch for variable 'FPUMatissaResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:144]
-WARNING: [Synth 8-327] inferring latch for variable 'FPUResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:58]
-WARNING: [Synth 8-327] inferring latch for variable 'FPUCarry_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:86]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'OUTPUT_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'Overflow_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Negativ_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:67]
+WARNING: [Synth 8-327] inferring latch for variable 'Zero_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'Result_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:75]
+WARNING: [Synth 8-327] inferring latch for variable 'ResultMul_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'FPUExponentResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:162]
+WARNING: [Synth 8-327] inferring latch for variable 'FPUMatissaResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:149]
+WARNING: [Synth 8-327] inferring latch for variable 'FPUResult_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'FPUCarry_reg' [C:/Users/xenia/Desktop/ALU/ALU/ALU.srcs/sources_1/new/ALU_TopLevel.vhd:150]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 801.965 ; gain = 468.695
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 803.605 ; gain = 470.566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -125,10 +125,8 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 1     
 	   3 Input      6 Bit       Adders := 1     
 	   3 Input      5 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
 	   3 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-	   3 Input      2 Bit       Adders := 1     
+	   4 Input      3 Bit       Adders := 1     
 +---Muxes : 
 	  12 Input      7 Bit        Muxes := 1     
 	  13 Input      7 Bit        Muxes := 1     
@@ -156,10 +154,8 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 1     
 	   3 Input      6 Bit       Adders := 1     
 	   3 Input      5 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
 	   3 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-	   3 Input      2 Bit       Adders := 1     
+	   4 Input      3 Bit       Adders := 1     
 +---Muxes : 
 	  12 Input      7 Bit        Muxes := 1     
 	  13 Input      7 Bit        Muxes := 1     
@@ -197,7 +193,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 801.965 ; gain = 468.695
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 803.605 ; gain = 470.566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -209,13 +205,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 805.633 ; gain = 472.363
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 808.258 ; gain = 475.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 805.855 ; gain = 472.586
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 808.480 ; gain = 475.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -227,7 +223,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -251,7 +247,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -264,7 +260,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -276,25 +272,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -316,9 +312,9 @@ Report Cell Usage:
 |4     |LUT3   |    10|
 |5     |LUT4   |    21|
 |6     |LUT5   |    37|
-|7     |LUT6   |    52|
-|8     |MUXF7  |     7|
-|9     |MUXF8  |     2|
+|7     |LUT6   |    51|
+|8     |MUXF7  |     9|
+|9     |MUXF8  |     3|
 |10    |LD     |    37|
 |11    |IBUF   |    13|
 |12    |OBUF   |     8|
@@ -328,20 +324,20 @@ Report Instance Areas:
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   202|
+|1     |top      |       |   204|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 819.152 ; gain = 486.113
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 816.762 ; gain = 168.980
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 816.762 ; gain = 483.492
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 819.152 ; gain = 171.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 819.152 ; gain = 486.113
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 828.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 830.230 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 37 instances were transformed.
   LD => LDCE: 37 instances
@@ -349,10 +345,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 24 Infos, 22 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 828.984 ; gain = 508.727
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 828.984 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 830.234 ; gain = 510.070
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 830.234 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/ALU_4bit.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ALU_4bit_utilization_synth.rpt -pb ALU_4bit_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 16:03:42 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  6 13:36:36 2019...

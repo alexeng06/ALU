@@ -159,7 +159,7 @@ architecture Behavioral of ALU_4bit is
         --Output new Matissa
         OUTPUT(3 downto 2) <= FPUMatissaResult(1 downto 0);
         --Calculate new Exponent
-        FPUExponentResult <= std_logic_vector(signed(DATA1(1 downto 0)) - signed(DATA2(1 downto 0)) - signed("00" & FPUCarry));
+        FPUExponentResult <= std_logic_vector("000" + signed(DATA1(1 downto 0)) - signed(DATA2(1 downto 0)) - signed("0" & FPUCarry));
         --Check if Exponent is out of range
         if((FPUExponentResult(2 downto 1) = "01")or(FPUExponentResult(2 downto 1) = "10")) then 
             Overflow <= '1';
@@ -183,7 +183,7 @@ architecture Behavioral of ALU_4bit is
             OUTPUT(3 downto 2) <= FPUMatissaResult(3 downto 2);
         end if ;
         --Calculate Exponent
-        FPUExponentResult <= std_logic_vector(signed(DATA1(1 downto 0)) + signed(DATA2(1 downto 0)) + signed("00" & FPUCarry));
+        FPUExponentResult <= std_logic_vector(signed("00" & FPUCarry) + signed(DATA1(1 downto 0)) + signed(DATA2(1 downto 0)));
         --Check if Exponent is out of Range
         if((FPUExponentResult(2 downto 1) = "01")or(FPUExponentResult(2 downto 1) = "10")) then 
             Overflow <= '1';

@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jun  6 13:05:28 2019
-# Process ID: 2236
+# Start of session at: Tue Jun  4 12:14:19 2019
+# Process ID: 9168
 # Current directory: C:/Users/xenia/Desktop/ALU/ALU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8120 C:\Users\xenia\Desktop\ALU\ALU\ALU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6972 C:\Users\xenia\Desktop\ALU\ALU\ALU.xpr
 # Log file: C:/Users/xenia/Desktop/ALU/ALU/vivado.log
 # Journal file: C:/Users/xenia/Desktop/ALU/ALU\vivado.jou
 #-----------------------------------------------------------
@@ -16,11 +16,21 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:18 . Memory (MB): peak = 757.617 ; gain = 149.238
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 744.410 ; gain = 166.598
 update_compile_order -fileset sources_1
-reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Jun  4 12:23:29 2019] Launched synth_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Jun  4 12:24:32 2019] Launched synth_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Tue Jun  4 12:25:39 2019] Launched impl_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Jun  6 13:06:44 2019] Launched impl_1...
+[Tue Jun  4 12:27:25 2019] Launched impl_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -33,14 +43,24 @@ INFO: [Labtools 27-2221] Launch Output:
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 858.602 ; gain = 0.000
 open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-open_hw_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1740.121 ; gain = 881.520
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1761.824 ; gain = 921.910
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
@@ -50,34 +70,13 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs synth_1 -jobs 2
-[Thu Jun  6 13:12:41 2019] Launched synth_1...
+[Tue Jun  4 12:45:20 2019] Launched synth_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 2
-[Thu Jun  6 13:13:52 2019] Launched impl_1...
+[Tue Jun  4 12:49:14 2019] Launched impl_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Jun  6 13:15:41 2019] Launched impl_1...
-Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Thu Jun  6 13:25:45 2019] Launched synth_1...
-Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-launch_runs impl_1 -jobs 2
-[Thu Jun  6 13:26:49 2019] Launched impl_1...
-Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Jun  6 13:28:40 2019] Launched impl_1...
+[Tue Jun  4 12:51:02 2019] Launched impl_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -88,25 +87,13 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs synth_1 -jobs 2
-[Thu Jun  6 13:31:23 2019] Launched synth_1...
-Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Thu Jun  6 13:32:20 2019] Launched synth_1...
-Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Thu Jun  6 13:35:42 2019] Launched synth_1...
+[Tue Jun  4 12:56:33 2019] Launched synth_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 2
-[Thu Jun  6 13:36:51 2019] Launched impl_1...
+[Tue Jun  4 12:57:49 2019] Launched impl_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Jun  6 13:38:47 2019] Launched impl_1...
+[Tue Jun  4 13:00:41 2019] Launched impl_1...
 Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -115,13 +102,19 @@ program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Jun  4 16:02:45 2019] Launched synth_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Tue Jun  4 16:03:56 2019] Launched impl_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jun  4 16:05:57 2019] Launched impl_1...
+Run output will be captured here: C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
 WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -130,6 +123,10 @@ program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4DE9BA
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A4D8E7A
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Jun  6 13:43:42 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 16:16:05 2019...

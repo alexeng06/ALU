@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jun  4 16:04:55 2019
+| Date         : Thu Jun  6 13:37:47 2019
 | Host         : DESKTOP-3L3CN7P running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file ALU_4bit_control_sets_placed.rpt
 | Design       : ALU_4bit
@@ -49,7 +49,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              37 |           20 |
+| No           | No                    | No                     |              37 |           19 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -66,7 +66,7 @@ Table of Contents
 +-----------------------------------+---------------+------------------+------------------+----------------+
 |  FPUMatissaResult_reg[5]_i_2_n_0  |               |                  |                1 |              1 |
 |  FPUResult_reg[6]_i_2_n_0         |               |                  |                1 |              1 |
-|  Result_reg[4]_i_2_n_0            |               |                  |                5 |              5 |
+|  Result_reg[4]_i_2_n_0            |               |                  |                4 |              5 |
 |  FPUResult_reg[5]_i_2_n_0         |               |                  |                2 |              6 |
 |  Change_IBUF_BUFG                 |               |                  |                5 |              7 |
 |  ResultMul_reg[7]_i_2_n_0         |               |                  |                2 |              8 |

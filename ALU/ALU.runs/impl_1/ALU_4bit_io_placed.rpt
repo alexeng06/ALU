@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Tue Jun  4 16:04:55 2019
+| Date                      : Thu Jun  6 13:37:47 2019
 | Host                      : DESKTOP-3L3CN7P running 64-bit major release  (build 9200)
 | Command                   : report_io -file ALU_4bit_io_placed.rpt
 | Design                    : ALU_4bit

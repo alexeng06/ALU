@@ -2,17 +2,24 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jun  6 13:05:28 2019
-# Process ID: 2236
+# Start of session at: Tue Jun  4 12:14:19 2019
+# Process ID: 9168
 # Current directory: C:/Users/xenia/Desktop/ALU/ALU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8120 C:\Users\xenia\Desktop\ALU\ALU\ALU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6972 C:\Users\xenia\Desktop\ALU\ALU\ALU.xpr
 # Log file: C:/Users/xenia/Desktop/ALU/ALU/vivado.log
 # Journal file: C:/Users/xenia/Desktop/ALU/ALU\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/xenia/Desktop/ALU/ALU/ALU.xpr
 update_compile_order -fileset sources_1
-reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 open_hw
@@ -26,13 +33,6 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
@@ -53,12 +53,6 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
 launch_runs impl_1 -jobs 2
 wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
@@ -68,6 +62,13 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/xenia/Desktop/ALU/ALU/ALU.runs/impl_1/ALU_4bit.bit} [get_hw_devices xc7a35t_0]
